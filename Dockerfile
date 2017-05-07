@@ -8,7 +8,7 @@
 #
 
 # Pull base image.
-FROM resin/rpi-raspbian:wheezy
+FROM resin/rpi-raspbian:latest
 
 # Install Haproxy.
 RUN \

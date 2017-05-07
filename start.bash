@@ -4,7 +4,7 @@
 # start.bash
 #
 
-HAPROXY="/etc/haproxy"
+HAPROXY="/usr/local/etc/haproxy/"
 OVERRIDE="/haproxy-override"
 PIDFILE="/var/run/haproxy.pid"
 
@@ -26,4 +26,4 @@ if [[ -f "$OVERRIDE/$CONFIG" ]]; then
   ln -s "$OVERRIDE/$CONFIG" "$CONFIG"
 fi
 
-exec haproxy -f /etc/haproxy/haproxy.cfg -p "$PIDFILE"
+exec haproxy -f /usr/local/etc/haproxy/haproxy.cfg -p "$PIDFILE"

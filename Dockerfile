@@ -20,9 +20,10 @@ RUN gpg --keyserver pgpkeys.mit.edu --recv-key  8B48AD6246925553 \
 RUN apt-get update \
 	&& apt-get install haproxy -t jessie-backports
 
-
+# Copy config file to container
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 
+# Run loadbalancer
 CMD ["haproxy", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
 
 # Expose ports.

@@ -1,12 +1,12 @@
-# rpi-haproxy#
+## rpi-haproxy
 
 T#his repository contains a port of the **Dockerfile** of [Haproxy](http://haproxy.1wt.eu/) for the Raspberry Pi.
 
-## Base Docker Image
+### Base Docker Image
 
 * resin/rpi-raspbian:latest
 
-## Installation
+### Installation
 
 1. Install [Docker](https://www.docker.com/) by downloading the [HypriotOS SD card image](http://blog.hypriot.com/heavily-armed-after-major-upgrade-raspberry-pi-with-docker-1-dot-5-0).
 
@@ -19,7 +19,7 @@ T#his repository contains a port of the **Dockerfile** of [Haproxy](http://hapro
 
     docker run -d -p 80:80 hypriot/rpi-haproxy
 
-#### Customizing Haproxy
+### Customizing Haproxy
 
     docker run -d -p 80:80 -v <override-dir>:/haproxy-override hypriot/rpi-haproxy
 
@@ -30,7 +30,7 @@ where `<override-dir>` is an absolute path of a directory that could contain:
 
 After few seconds, open `http://<host>` to see the haproxy stats page.
 
-## Acknowledgements
+### Acknowledgements
 
 - Upstream HAProxy:  https://github.com/docker-library/docs/tree/master/haproxy
 - Resin Raspbian: https://hub.docker.com/r/resin/rpi-raspbian/
